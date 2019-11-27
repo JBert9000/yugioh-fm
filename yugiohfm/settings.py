@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("YUGIOH_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG_VALUE")
+# DEBUG = os.environ.get("DEBUG_VALUE")
+DEBUG = False
 
-ALLOWED_HOSTS = ['yugioh-fm.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'yugioh-fm.herokuapp.com']
 
 
 # Application definition
