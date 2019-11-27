@@ -1,1 +1,1 @@
-web: gunicorn yugiohfm.wsgi
+web: gunicorn "yugiohfm.wsgi"
