@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get("YUGIOH_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG_VALUE")
 
-ALLOWED_HOSTS = ['https://yugioh-fm.herokuapp.com/']
+ALLOWED_HOSTS = ['yugioh-fm.herokuapp.com']
 
 
 # Application definition
