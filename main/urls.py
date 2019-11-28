@@ -8,7 +8,7 @@ from .views import (
 
 urlpatterns = [
     # path('', views.home, name='main-home'),
-    path('', HomePageView.as_view(), name='main-home'),
-    path('guide/', views.guide, name='main-guide'),
-    path('streams/', views.streams, name='main-streams'),
+    path('', HomePageView.as_view(), name='home'),
+    path('guide/', views.guide, name='guide'),
+    path('streams/', views.streams, name='streams'),
 ]
