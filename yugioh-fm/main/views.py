@@ -16,5 +16,5 @@ def guide(request):
     return render(request, 'main/guide.html')
 
 
-def streams(request):
-    return render(request, 'main/streams.html')
+# def streams(request):
+#     return render(request, 'main/streams.html')

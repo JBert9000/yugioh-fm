@@ -20,11 +20,13 @@ from django.urls import path, include
 # from django.conf.urls import patterns, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from main import views as main_views
+from frontend import views as frontend_views
 
 urlpatterns = [
+    path('streams/', frontend_views.streams, name="streams"),
     path('admin/', admin.site.urls),
     path('guide/', main_views.guide, name="guide"),
-    path('streams/', main_views.streams, name="streams"),
+    # path('streams/', main_views.streams, name="streams"),
     path('', include('main.urls')),
 
 ]

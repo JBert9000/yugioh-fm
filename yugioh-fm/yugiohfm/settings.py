@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get("YUGIOH_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = os.environ.get("DEBUG_VALUE")
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'yugioh-fm.herokuapp.com']
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'frontend'
 ]
 
 MIDDLEWARE = [
