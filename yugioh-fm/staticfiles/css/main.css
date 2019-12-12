@@ -128,6 +128,11 @@ body {
   background-color: #ffbf80;
   text-indent:20px each-line;
   padding: 25px;
+  height: auto;
+}
+
+.form-control a {
+  color: #1D12E0;
 }
 
 /* Main Stream */
@@ -136,5 +141,5 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  
+
 }

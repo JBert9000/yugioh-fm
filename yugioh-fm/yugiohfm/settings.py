@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get("YUGIOH_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = os.environ.get("DEBUG_VALUE")
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', 'yugioh-fm.herokuapp.com']
 
@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['localhost', 'yugioh-fm.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'main.apps.MainConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webpack_loader',
     'frontend'
 ]
 
@@ -125,7 +127,9 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 STATIC_URL = '/static/'
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATIC_URL = '/yugioh-fm/yugioh-fm/frontend/static/frontend/main.js/'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
@@ -133,3 +137,11 @@ STATICFILES_DIRS = (
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',        # Devlopment environment setting, comment if in production mode
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),        # Production environment setting, comment if in development mode
+        # 'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats-prod.json'),
+    }
+}

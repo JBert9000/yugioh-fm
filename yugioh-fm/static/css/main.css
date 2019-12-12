@@ -128,4 +128,5 @@ body {
   background-color: #ffbf80;
   text-indent:20px each-line;
   padding: 25px;
+  height: auto;
 }

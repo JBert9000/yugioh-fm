@@ -29,6 +29,6 @@ urlpatterns = [
     # path('streams/', main_views.streams, name="streams"),
     path('', include('main.urls')),
 
-]
+] # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
