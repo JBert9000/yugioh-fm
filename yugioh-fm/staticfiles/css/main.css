@@ -130,16 +130,3 @@ body {
   padding: 25px;
   height: auto;
 }
-
-.form-control a {
-  color: #1D12E0;
-}
-
-/* Main Stream */
-
-#live-stream {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-}
