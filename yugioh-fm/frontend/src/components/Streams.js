@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 class Streams extends Component {
   render() {
-    return <h1>If you're seeing this, Streams Component is imported.</h1>
+    return <h1>If you're seeing this, Streams Component is imported. Test Test Test</h1>
   }
 };
 
